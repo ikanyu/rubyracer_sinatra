@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>RubyRacerJS</title>
+<link rel="stylesheet" href="../css/rubyracer_js.css" type='text/css'></link>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="../js/rubyracer_js.js"></script>
+
+</head>
+
+<body>
+<% @players.each do |player| %>
+<%= player.name %>
+<% end %>
+<div class="game" data-game-id="<%= @game.id %>" data-player-one="<%= @player1.id %>" data-player-two="<%= @player2.id %>"></div>
+<table class="racer_table">
+  <tr id="player1_strip">
+    <td class="active"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="player2_strip">
+    <td class="active"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<div class="results1"></div>
+<div class="results2"></div>
+<div class="finalresults"></div>
+<div class="timestart"></div>
+<div class="timeend"></div>
+<div class="timetaken"></div>
+<button id='button1'>Start Game</button>
+</body>
+
+
+</html>
